@@ -1,7 +1,5 @@
 // https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple
 
-import { nanoid } from 'nanoid'
-
 const BASE_URL = 'https://opentdb.com/api.php?';
 
 export const fetchQuizQuestions = async (query) => {
@@ -35,7 +33,7 @@ export const fetchQuizQuestions = async (query) => {
         }
     console.log(data);
     return data.results.map((item) => ({
-        id: nanoid(),
+        id: new Date().getTime().toString() ,
         question: item.question,
         answers: item.correct_answer,
         wrongAnswersList: item.incorrect_answers,
