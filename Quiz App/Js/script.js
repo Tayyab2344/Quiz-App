@@ -1,3 +1,35 @@
+const parseQueryParams = (url) => {
+  const queryParams = {};
+  const queryString = url.split('?')[1];
+  if (queryString) {
+    const pairs = queryString.split('&');
+    pairs.forEach(pair => {
+      const [key, value] = pair.split('=');
+      queryParams[key] = decodeURIComponent(value);
+    });
+  }
+  return queryParams;
+};
+
+const currentUrl = window.location.href;
+const queryParams = parseQueryParams(currentUrl);
+const category = queryParams['category'] || '';
+const difficulty = queryParams['difficulty'] || '';
+const type = queryParams['type'] || '';
+const amount = queryParams['amount'] || '';
+
+
+
+
+
+
+
+
+
+
+
+
+
 const quizData = [
     {
       question: 'What is the capital of France?',
