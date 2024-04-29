@@ -1,4 +1,4 @@
 # Quiz App
 
 ## Live Demo
-https://github.com/Tayyab2344/Quiz-App.git
+https://tayyab2344.github.io/Quiz-App/
